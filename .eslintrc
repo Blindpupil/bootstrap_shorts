@@ -1,0 +1,19 @@
+extends: airbnb-base
+
+rules:
+  comma-dangle: ["error", "never"]
+  no-multi-spaces: ["error", { exceptions: { "VariableDeclarator": true, "ImportDeclaration": true, "AssignmentExpression": true } }]
+  no-console: ["error", { allow: ["warn", "error", "info"] }]
+  import/no-unresolved: [2, { commonjs: false, amd: false }]
+  func-names: ["error", "as-needed"]
+  no-param-reassign: ["error", { "props": false }]
+  no-restricted-properties: [2, {"object": "disallowedObjectName", "property": "disallowedPropertyName"}]
+  no-unused-expressions: ["error", { "allowShortCircuit": true, "allowTernary": true }]
+  no-underscore-dangle: ["error", { "allow": ["_doc", "_id", "_error", "_process"] }]
+
+globals:
+  $:         true
+  window:    true
+  jQuery:    true
+  document:  true
+  navigator: true
