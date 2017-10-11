@@ -193,12 +193,10 @@ Supports text and HTML content
 ```bash
 # Usage
 [nav [options attributes]]
-
-[nav-content-container] 
   [nav-content [options attributes]]
     Content
   [/nav-content]
-[/nav-content-container]
+[/nav]
 =======
 
 # nav Options/Attributes
@@ -207,27 +205,18 @@ class    # @String - extend button styling by declaring additional classes.
 anchors  # @JSON String - '{"text":"href", "otherText":"otherHref", etc...}'.
 style    # @String - extend styling even further with inline styles.
 
-# nav-content-container Options/Attributes
-id       # @String - provide an id for the nav container.
-class    # @String - extend button styling by declaring additional classes.
-style    # @String - extend styling even further with inline styles.
-
 # nav-content Options/Attributes
 id       # @String - This id needs to correspond to the href as declared in nav anchor.
-class    # @String - The first one or the one to be shown by default requires 'show active'.
+class    # @String - The one to be shown by default requires 'show active'.
 style    # @String - extend styling even further with inline styles.
 
 # Example
-[nav id='myTab' class='nav-tabs justify-content-center' anchors='{"Home":"home", "About":"about", "Info":"info"}' ]
-[nav-content-container]
- [nav-content id="home" class='fade show active']
-  Home tab content
- [/nav-content]
- [nav-content id="about" class='fade']
-  About tab content
- [/nav-content]
- [nav-content id="info" class='fade']
-  Info tab content
- [/nav-content]
-[/nav-content-container]
+[nav id='myTab' class='nav-tabs justify-content-center' anchors='{"Home":"home", "About":"about"}']
+ [nav-content id="home" class='fade show active']
+  Home tab content
+ [/nav-content]
+ [nav-content id="about" class='fade']
+  About tab content
+ [/nav-content]
+[/nav]
 ```
